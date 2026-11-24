@@ -1,0 +1,7 @@
+# Normalise line endings (keeps Dockerfiles & shell scripts working on Linux)
+* text=auto eol=lf
+
+# Binary artifacts
+*.pkl binary
+*.png binary
+*.jpg binary

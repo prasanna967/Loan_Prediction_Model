@@ -1,0 +1,12 @@
+# Development / notebook / test dependencies (not needed in production).
+-r requirements.txt
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.68.0
+kiwisolver==1.5.1
+matplotlib==3.11.2
+pillow==13.0.0
+pyparsing==3.3.3
+seaborn==0.13.2
+pytest
+httpx

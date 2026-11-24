@@ -1,0 +1,13 @@
+.git
+.github
+.venv
+__pycache__
+.pytest_cache
+Frontend
+tests
+*.ipynb
+*.csv
+.env
+.env.*
+README.md
+docker-compose.yml

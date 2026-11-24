@@ -1,0 +1,160 @@
+.loan-form__viewport {
+  min-height: 340px;
+}
+
+.loan-form__step {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.grid-2,
+.grid-3 {
+  display: grid;
+  gap: 18px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.loan-form__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.loan-form__alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  border-radius: var(--radius);
+  background: var(--danger-soft);
+  color: #fecaca;
+  font-size: 0.92rem;
+}
+
+.loan-form__alert svg {
+  flex-shrink: 0;
+  color: var(--danger);
+}
+
+/* Loan-to-income meter */
+.lti {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(5, 8, 22, 0.4);
+  --lti-color: var(--text-dim);
+}
+
+.lti--good {
+  --lti-color: var(--success);
+}
+.lti--fair {
+  --lti-color: var(--warning);
+}
+.lti--high {
+  --lti-color: var(--danger);
+}
+
+.lti__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.lti__head strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.lti__head small {
+  margin-left: 6px;
+  color: var(--lti-color);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+}
+
+.lti__bar {
+  height: 8px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.lti__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--lti-color);
+  box-shadow: 0 0 16px var(--lti-color);
+  transition: background 0.3s;
+}
+
+.lti__note {
+  margin-top: 10px;
+  color: var(--text-dim);
+  font-size: 0.76rem;
+}
+
+/* Review */
+.review {
+  padding: 20px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.review__title {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.review dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 14px 0 0;
+}
+
+.review dt {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.review dd {
+  margin: 2px 0 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .review dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .loan-form__actions .btn {
+    flex: 1;
+    padding: 14px 16px;
+  }
+}
