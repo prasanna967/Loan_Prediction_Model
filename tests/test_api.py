@@ -31,7 +31,7 @@ def test_predict_returns_probability():
         body = res.json()
         assert 0.0 <= body["default_probability"] <= 1.0
         assert body["default_prediction"] in (0, 1)
-        assert body["Result"] in ("High Risk", "Low Risk")
+        assert body["Result"] in ("Eligible", "Not Eligible")
 
 
 def test_predict_rejects_invalid_category():

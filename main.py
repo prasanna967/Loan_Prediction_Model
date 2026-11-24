@@ -105,5 +105,5 @@ def predict(data: LoanApplication):
         "default_probability": probability,
         "default_prediction": prediction,
         "threshold": ml_model["threshold"],
-        "Result": "High Risk" if prediction == 1 else "Low Risk",
+        "Result": "Not Eligible" if prediction == 1 else "Eligible",
     }
