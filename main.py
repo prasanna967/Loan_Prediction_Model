@@ -24,7 +24,7 @@ MODEL_PATH = BASE_DIR / os.getenv("MODEL_PATH", "credit_risk_model.pkl")
 THRESHOLD_PATH = BASE_DIR / os.getenv("THRESHOLD_PATH", "best_threshold.pkl")
 ALLOWED_ORIGINS = [
     origin.strip()
-    for origin in os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
+    for origin in os.getenv(ALLOWED_ORIGINS).split(",")
     if origin.strip()
 ]
 
