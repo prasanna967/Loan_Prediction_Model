@@ -24,7 +24,10 @@ MODEL_PATH = BASE_DIR / os.getenv("MODEL_PATH", "credit_risk_model.pkl")
 THRESHOLD_PATH = BASE_DIR / os.getenv("THRESHOLD_PATH", "best_threshold.pkl")
 ALLOWED_ORIGINS = [
     origin.strip()
-    for origin in os.getenv(ALLOWED_ORIGINS).split(",")
+    for origin in os.getenv(
+        "ALLOWED_ORIGINS",
+        "https://loan-eligibility-ui-3ust.onrender.com,http://localhost:5173",
+    ).split(",")
     if origin.strip()
 ]
 
